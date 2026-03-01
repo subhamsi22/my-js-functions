@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 2em;
+        }
+        #change {
+            color: #ff6347; /* Tomato color */
+        }
+    </style>
+</head>
+<body>
+    <div id="change"></div>
+    <script>
+var change = document.getElementById("change");
+const leta = ["a","b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "n",
+  "j",
+  "k",
+  "l",
+  "m",
+  "i",
+];
+let all = 0;
+function changee(){
+   if(all<leta.length){
+    change.textContent = leta[all];
+   }
+  if(leta[all]==="i"){
+    clearInterval(interval);
+
+
+   }
+   all++;
+}
+const interval =  setInterval(changee , 1000);
+    </script>
+</body>
+</html>

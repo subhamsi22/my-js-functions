@@ -1,0 +1,27 @@
+
+<html>
+  <body>
+    <input type="file" id="filer">
+   <button id="submit"> click me </button>
+   <img id="image" src="#" alt="" />
+   <script type="text/javascript" charset="utf-8">
+     var   submit  = document.getElementById("submit");
+          var   imagesrc  = document.getElementById("image");
+     var   filed  = document.getElementById("filer");
+     
+
+     submit.onclick = function(){
+       var file = filed.files[0];
+       var reader = new FileReader();
+       reader.onload = function(e){
+         imagesrc.src = e.target.result;
+         
+       };
+       reader.readAsDataURL(file);
+       
+     }
+// this code is for image viewe
+r 
+     </script>
+  </body>
+</html> 

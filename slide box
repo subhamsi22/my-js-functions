@@ -1,0 +1,26 @@
+var slide =  document.querySelector(".slide");
+var prv  = document.getElementById("prv");
+var boxes = document.querySelectorAll(".box");
+var next  = document.getElementById("next");
+
+let a = 0;
+function myslide(){
+    const c = -a *50;
+    slide.style.transform = `translateX(${c}px)`;
+
+}
+
+prv.addEventListener('click',()=>{
+    if(a>0){
+        a--;
+        myslide();
+    }
+});
+next.addEventListener("click",()=>{
+    if(a< boxes.length - 1){
+        a++;
+        myslide();
+        
+    }
+   
+});
