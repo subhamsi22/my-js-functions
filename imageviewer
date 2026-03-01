@@ -6,7 +6,7 @@
    <img id="image" src="#" alt="" />
    <script type="text/javascript" charset="utf-8">
      var   submit  = document.getElementById("submit");
-          var   imagesrc  = document.getElementById("image");
+     var   imagesrc  = document.getElementById("image");
      var   filed  = document.getElementById("filer");
      
 
