@@ -2,7 +2,6 @@ function question(number1, yes, no){
     if(number1){
         yes();
     }    else{
-        no();
     }
 }
 function agree(){
