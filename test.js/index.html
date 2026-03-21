@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card- display</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .main {
+        border: 2px solid black;
+        height: 200px;
+        width: 200px;
+
+    }
+
+    .card {
+        margin: 20px;
+        border: 2px solid rgb(221, 221, 221);
+        height: 300px;
+        width: 200px;
+        color: #fff;
+    }
+
+    .card img {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin: 20px;
+        margin-left: 50px;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <form action="" id="for">
+            <input type="text" placeholder="name">
+            <input type="text" placeholder="email">
+            <input type="text" placeholder="info">
+            <input type="text" placeholder="profile_pic">
+            <button type="submit">submit</button>
+        </form>
+
+    </div>
+
+    <script>
+        var form = document.querySelector("#for");
+        var input = document.querySelectorAll("input");
+        var main = document.querySelector(".main");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            var card = document.createElement("div");
+            card.classList.add("card");
+            var img = document.createElement("img");
+            img.setAttribute("src", input[3].value);
+            card.appendChild(img);
+            var p1 = document.createElement("p");
+            p1.textContent = input[0].value;
+            card.appendChild(p1);
+            var p2 = document.createElement("p");
+            p2.textContent = input[1].value;
+            card.appendChild(p2);
+            var p3 = document.createElement("p");
+            p3.textContent = input[2].value;
+            card.appendChild(p3);
+            main.appendChild(card);
+
+        })
+
+    </script>
+</body>
+
+</html>
